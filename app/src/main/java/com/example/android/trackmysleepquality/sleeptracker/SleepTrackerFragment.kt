@@ -106,6 +106,11 @@ class SleepTrackerFragment : Fragment() {
                 sleepTrackerViewModel.doneNavigating()
             }
         })
+
+        //Informando o RecyclerView sobre o adaptador
+        val adapter = SleepNightAdapter()
+        binding.sleepList.adapter = adapter
+
         return binding.root
     }
 }
